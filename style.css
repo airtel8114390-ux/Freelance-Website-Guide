@@ -1,0 +1,666 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f7f7f5;
+    color: #171717;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.nav-content {
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #635bff;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #635bff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            #ddd9ff,
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f0efff
+        );
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.small-title,
+.section-label {
+    color: #635bff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    max-width: 850px;
+
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.02;
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #635bff;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    font-size: 19px;
+    color: #5f5f66;
+
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: #171717;
+    color: white;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+    background: #635bff;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    padding: 110px 0;
+    background: white;
+}
+
+.intro-content {
+    max-width: 850px;
+}
+
+.intro h2,
+.section-heading h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.intro p:last-child {
+    font-size: 18px;
+    color: #666;
+}
+
+
+/* =========================
+   PLATFORMS
+========================= */
+
+.platforms {
+    padding: 110px 0;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin-bottom: 65px;
+}
+
+.section-heading > p:last-child {
+    color: #666;
+    font-size: 17px;
+}
+
+
+/* =========================
+   PLATFORM CARD
+========================= */
+
+.platform-card {
+    position: relative;
+
+    background: white;
+
+    border: 1px solid #e7e7e7;
+    border-radius: 20px;
+
+    padding: 45px;
+
+    margin-bottom: 35px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.04);
+
+    transition: 0.3s;
+}
+
+.platform-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.platform-number {
+    position: absolute;
+
+    top: 30px;
+    right: 35px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #aaa;
+}
+
+.platform-info h3 {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+
+    margin-bottom: 3px;
+}
+
+.website {
+    color: #635bff !important;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.platform-info > p {
+    color: #666;
+}
+
+.details {
+    margin-top: 30px;
+
+    display: grid;
+    gap: 15px;
+}
+
+.details div {
+    padding: 15px;
+
+    background: #f7f7f7;
+
+    border-radius: 10px;
+}
+
+.details strong {
+    display: block;
+
+    font-size: 13px;
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 3px;
+}
+
+.details span {
+    color: #555;
+    font-size: 14px;
+}
+
+
+/* =========================
+   WEBSITE IMAGE
+========================= */
+
+.website-image {
+    min-height: 300px;
+
+    background: #f0f0f0;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #ddd;
+}
+
+.website-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.website-image:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   PROS & CONS
+========================= */
+
+.pros-cons {
+    grid-column: 1 / -1;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    border-top: 1px solid #eee;
+
+    padding-top: 30px;
+}
+
+.pros,
+.cons {
+    padding: 20px;
+
+    border-radius: 12px;
+}
+
+.pros {
+    background: #f3faf5;
+}
+
+.cons {
+    background: #faf5f5;
+}
+
+.pros h4,
+.cons h4 {
+    margin-bottom: 12px;
+}
+
+.pros h4 {
+    color: #278548;
+}
+
+.cons h4 {
+    color: #b34b4b;
+}
+
+.pros ul,
+.cons ul {
+    padding-left: 20px;
+
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   COMPARISON
+========================= */
+
+.comparison {
+    padding: 110px 0;
+
+    background: #171717;
+
+    color: white;
+}
+
+.comparison .section-label {
+    color: #a8a2ff;
+}
+
+.comparison .section-heading > p:last-child {
+    color: #aaa;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 750px;
+}
+
+th,
+td {
+    text-align: left;
+
+    padding: 20px;
+
+    border-bottom: 1px solid #333;
+}
+
+th {
+    color: #aaa;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+td {
+    font-size: 15px;
+}
+
+tbody tr:hover {
+    background: #222;
+}
+
+
+/* =========================
+   STRATEGY
+========================= */
+
+.strategy {
+    padding: 110px 0;
+
+    background: #f0efff;
+}
+
+.strategy-box {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.strategy h2 {
+    font-size: 50px;
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+}
+
+.strategy-box > div:first-child p:last-child {
+    color: #666;
+
+    font-size: 17px;
+}
+
+.steps {
+    display: grid;
+
+    gap: 15px;
+}
+
+.steps > div {
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 12px;
+
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    column-gap: 15px;
+}
+
+.steps span {
+    grid-row: span 2;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #635bff;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.steps strong {
+    font-size: 17px;
+}
+
+.steps p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #111;
+
+    color: white;
+
+    padding: 60px 0;
+}
+
+.footer-content {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.footer-content > p {
+    color: #999;
+
+    font-size: 14px;
+}
+
+.copyright {
+    font-size: 12px !important;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 580px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .platform-card {
+        grid-template-columns: 1fr;
+    }
+
+    .website-image {
+        min-height: 250px;
+    }
+
+    .pros-cons {
+        grid-template-columns: 1fr;
+    }
+
+    .strategy-box {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .platform-card {
+        padding: 25px;
+
+        border-radius: 15px;
+    }
+
+    .platform-info h3 {
+        font-size: 32px;
+    }
+
+    .platform-number {
+        top: 20px;
+        right: 20px;
+    }
+
+    .intro,
+    .platforms,
+    .comparison,
+    .strategy {
+        padding: 75px 0;
+    }
+
+    .strategy h2 {
+        font-size: 38px;
+    }
+
+    th,
+    td {
+        padding: 15px;
+    }
+
+}
